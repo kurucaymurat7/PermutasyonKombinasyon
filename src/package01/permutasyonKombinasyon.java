@@ -1,6 +1,6 @@
 package package01;
 
-public class main {
+public class permutasyonKombinasyon {
     public static void main(String[] args) {
 
     ///*  Problem Tanımı
@@ -31,12 +31,18 @@ public class main {
         System.out.println("Permutasyon : " + permutasyonSonuc);
     }
 
-    private static double faktoriyel(int sayi) {
+    /*private static double faktoriyel(int sayi) {
         double faktoriyelSonuc = 1;
         for (int i = 1; i <= sayi; i++) {
             faktoriyelSonuc *= i;
         }
         return faktoriyelSonuc;
+    }*/
+
+    // üstte amelece yapıldı, bu daha profesyonel oldu.
+    private static double faktoriyel(int sayi) {
+        if (sayi <= 0) return 1;
+        else return sayi * faktoriyel(sayi-1);
     }
 
     private static double kombinasyon(int sayi1, int sayi2) {
